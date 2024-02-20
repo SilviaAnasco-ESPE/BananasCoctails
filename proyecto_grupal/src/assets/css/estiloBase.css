@@ -1,0 +1,220 @@
+/*Selector Universal*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*Selectores de etiqueta*/
+body {
+  margin: 0 auto;
+  font-family: sans-serif;
+  background-color: rgba(167, 81, 179, 0.9);
+}
+
+a {
+  text-decoration: none;
+}
+/*Fin de los Selectores de etiqueta*/
+
+/*Selectores por clase*/    
+.piePagina {
+  background-color: #2b2c2e;
+  color: white;
+  text-align: center;
+  padding: 3%;
+  margin-top: auto;
+  width: 100%;
+}
+
+.seccionPrincipal {
+  margin-top: 90px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  margin-top: 0 auto;
+}
+
+.socials a {
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-size: 20px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #ffffff;
+  z-index: 1001;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+/*Fin de Selectores por clase*/
+
+/*Selectores mixtos*/
+
+/*Este justo es un ejemplo de Agrupacion de selectores*/
+.container .btn-menu,
+.logo {
+  float: left;
+  line-height: 100px;
+}
+
+.container .btn-menu label {
+  color: #1c1524;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.container .menu {
+  float: right;
+  line-height: 100px;
+}
+
+.container .menu a {
+  display: inline-block;
+  padding: 15px;
+  line-height: normal;
+  text-decoration: none;
+  color: #000000;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+/*Aqui un ejemplo de Pseudoclase de raton :hover*/
+.container .menu a:hover {
+  border-bottom: 2px solid #8108a0;
+  padding-bottom: 5px;
+}
+
+.container-menu {
+  position: fixed;
+  background: rgba(22, 22, 22, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1002; /* Asegúrate de que el z-index sea mayor que el del encabezado */
+}
+
+.cont-menu {
+  width: 100%;
+  max-width: 250px;
+  background-image: linear-gradient(rgb(81, 9, 109) 5%, rgb(0, 0, 0) 35%);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+  z-index: 1003; /* Asegúrate de que el z-index sea mayor que el del encabezado */
+}
+
+.cont-menu img{
+  margin-top: 10%;
+}
+
+.cont-menu img:hover{
+  transform: scale(1.2);
+}
+
+.cont-menu nav {
+  transform: translateY(15%);
+}
+
+.cont-menu nav a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #c7c7c7;
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+  font-weight: bold;
+}
+
+/*Aqui un ejemplo de Pseudoclase de raton :hover*/
+.cont-menu nav a:hover {
+  border-left: 5px solid #c7c7c7;
+  background: #ac8b8b;
+  color:#000000;
+}
+
+.cont-menu label {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.contenido-adicional {
+  margin-top: 20px;
+}
+
+.logo h1 {
+  color: #000000;
+  font-weight: 400;
+  font-size: 30px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+/*Fin de Selectores mixtos*/
+
+/*Selectores por ID*/
+#btn-menu {
+  display: none;
+}
+
+/*Selectores hermano general*/
+#btn-menu:checked ~ .container-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu {
+  transform: translateX(0%);
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu label {
+  display: block;
+}
+/*Fin de los Selectores hermano general*/
+/*Fin de los Selectores por ID*/
+
+/* LARGE SIZE */
+@media (max-width: 700px) {
+  .logo{
+    display: none ;
+  }
+}

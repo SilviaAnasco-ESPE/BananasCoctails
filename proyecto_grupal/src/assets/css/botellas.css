@@ -1,0 +1,79 @@
+/*Estilos para las tarjetas de botellas*/
+html,
+body{
+    position: relative;
+    height: 100%;
+}
+.swiper{
+    width: 100%;
+    padding: 150px 1 50px 0;
+}
+.swiper-slide{
+    
+    width: 300px;
+    height: 600px;
+    background-color: #323232;
+    box-shadow: 0 0 20px rgba(0,0, 0, 0.4);
+    padding: 40px;
+    text-align: center;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.icons i{
+    font-size: 20px;
+    color: #FFB900;
+}
+
+.icons img{
+    width: 120px;
+}
+
+.product-content{
+    display: flex;
+    justify-content: space-between;
+
+}
+.product-text{
+    flex-basis: 50%;
+    text-align: left;
+}
+
+.product-text span{
+    font-size: 25px;
+    color: #FFB900;
+    font-weight: bold;
+}
+
+.product-text h3{
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.product-text p{
+    font-size: 14px;
+    color: #c4c4c4;
+}
+
+.product-img{
+    flex-basis: 50%;
+    text-align: right;
+}
+.product-img img{
+    width: 120px;
+}
+
+.btn-1{
+    display: inline-block;
+    padding:  13px 55px;
+    border: 1px solid #FFB900;
+    border-radius: 25px;
+    color: #FFB900;
+    text-decoration: none;
+    margin-top: 50px;
+}
