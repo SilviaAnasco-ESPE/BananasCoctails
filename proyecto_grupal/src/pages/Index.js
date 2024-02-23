@@ -1,7 +1,6 @@
 import React from 'react';
 import '../assets/css/index.css';
 import '../assets/css/estiloBase.css';
-import logoMenu from '../assets/img/logo.png';
 import Imagen1 from '../assets/img/Imagen1.jpg';
 import Imagen2 from '../assets/img/Imagen2.jpg';
 import Imagen3 from '../assets/img/Imagen3.jpg';
@@ -11,51 +10,14 @@ import Galeria3 from '../assets/img/Imagenes_iconos/Galeria3.jpeg'
 import Galeria4 from '../assets/img/Imagenes_iconos/Galeria4.jpeg'
 import Galeria5 from '../assets/img/Imagenes_iconos/Galeria5.jpeg'
 import Imag2 from '../assets/img/Imagen2.jpg'
-import { Link } from 'react-router-dom';
 import Reloj from '../components/Reloj';
+import Menu from '../components/Menu';
+import PiePagina from '../components/Footer';
 
 function index() {
     return (
         <div className="App">
-      <header className="header">
-        <section className="container">
-          <section className="btn-menu">
-            <label htmlFor="btn-menu">☰</label>
-          </section>
-
-          <section className="logo">
-            <h1>BANANAS COCKTAILS</h1>
-          </section>
-
-          <nav className="menu">
-            <Link to = "/">Inicio</Link>
-            <Link to = "/nosotros">Nosotros</Link>
-            <a href="#contacto">Contacto</a>
-            <Link to = "/login">Iniciar Sesion</Link>
-          </nav>
-        </section>
-      </header>
-
-      <input type="checkbox" id="btn-menu" />
-
-      <aside className="container-menu">
-        <section className="cont-menu">
-          <header>
-            <center>
-              <img src={logoMenu} width="60%" />
-            </center>
-          </header>
-          <nav>
-            <Link to = "/carta">Carta</Link>
-            <Link to = "/paquetes">Paquetes</Link>
-            <a href="#contacto">Nosotros</a>
-            <Link to = "/login">Salir</Link>
-          </nav>
-         
-
-          <label htmlFor="btn-menu">✖️</label>
-        </section>
-      </aside>
+      <Menu />
 
       <section className="seccionPrincipal">
         <section className="slider-box">
@@ -192,27 +154,7 @@ function index() {
         </section>
       </section>
 
-      <footer className="piePagina">
-        <p>Banana's Cocktails</p>
-        <p>Copyright ©</p>
-        <section className="socials">
-          <a
-            style={{ background: "rgb(61, 131, 221)" }}
-            href="https://www.facebook.com/choilusion"
-            className="fa-brands fa-facebook-f"
-          ></a>
-          <a
-            style={{ background: "rgb(67, 182, 228)" }}
-            href="https://twitter.com/?lang=es"
-            className="fa-brands fa-twitter"
-          ></a>
-          <a
-            style={{ backgroundImage: "linear-gradient(to right, #ff8d54, #ff13ff)" }}
-            href="https://www.instagram.com/bananas_cocktails/"
-            className="fa-brands fa-instagram"
-          ></a>
-        </section>
-      </footer>
+      <PiePagina />
     </div>
     )
     

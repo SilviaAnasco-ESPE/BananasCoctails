@@ -15,6 +15,7 @@ import SandiaMenta from '../assets/img/Carta/MARGARITAS/Margarita de sandía y m
 import MaracuyaJalapeno from '../assets/img/Carta/MARGARITAS/Margarita de maracuyá y jalapeño.png';
 import CocoPina from '../assets/img/Carta/MARGARITAS/Margarita de coco y piña.png';
 
+
 const items = [
     {
       imgSrc: Gin,
@@ -123,7 +124,7 @@ const items = [
     }
   ];
 
-const Carta = () => {
+const Productos = () => {
   const [productos, setProductos] = useState({});
 
   useEffect(() => {
@@ -176,4 +177,4 @@ const Carta = () => {
   );
 };
 
-export default Carta;
+export default Productos;

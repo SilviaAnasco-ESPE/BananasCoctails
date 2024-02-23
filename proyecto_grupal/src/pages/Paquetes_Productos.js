@@ -1,9 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../assets/css/paquetesProductos.css";
 import "../assets/css/estiloBase.css";
 import "../assets/css/botellas.css";
-import { Link } from 'react-router-dom';
-import logoMenu from '../assets/img/logo.png';
 import CAMBUR from '../assets/img/PACK CAMBUR.jpg';
 import ORITO from '../assets/img/PACK ORITO.jpg';
 import PLUS from '../assets/img/PACK ORITO PLUS.jpg';
@@ -12,49 +10,18 @@ import BotellasLogo from '../assets/img/Botellas/logo.png';
 import Botella1 from '../assets/img/Botellas/1.png';
 import Botella2 from '../assets/img/Botellas/2.png';
 import Botella3 from '../assets/img/Botellas/3.png';
+import Menu from '../components/Menu';
+import PiePagina from '../components/Footer';
+
 
 const PaquetesProductos = () => {
+   
     
     return (
         <div>
-            <header className="header">
-                <section className="container">
-                    <section className="btn-menu">
-                        <label htmlFor="btn-menu">☰</label>
-                    </section>
-
-                    <section className="logo">
-                        <h1>BANANAS COCKTAILS</h1>
-                    </section>
-
-                    <nav className="menu">
-                        <Link to = "/">Inicio</Link>
-                        <Link to = "/nosotros">Nosotros</Link>
-                        <a href="#contacto">Contacto</a>
-                        <Link to = "/login">Iniciar Sesion</Link>
-                    </nav>
-                </section>
-            </header>
-
-            <input type="checkbox" id="btn-menu" />
-
-            <aside className="container-menu">
-                <section className="cont-menu">
-                    <header>
-                        <center>
-                            <img src={logoMenu} width="60%" alt="Logo" />
-                        </center>
-                    </header>
-                    <nav>
-                        <Link to = "/carta">Carta</Link>
-                        <Link to = "/paquetes">Paquetes</Link>
-                        <Link to = "/inicio#contacto">Contacto</Link>
-                        <Link to = "/login">Salir</Link>
-                    </nav>
-                    <label htmlFor="btn-menu">✖️</label>
-                </section>
-            </aside>
-
+            <Menu />
+            
+    
             <section className="seccionPrincipal">
                 <h2 className="titulo1">Nuestros Mejores paquetes</h2>
                 <section className="coleccionCartas">
@@ -245,30 +212,9 @@ const PaquetesProductos = () => {
             </section>
             </section>
 
-            <footer className="piePagina">
-                <p>Banana's Cocktails</p>
-                <p>Copyright ©</p>
-                <section className="socials">
-                    <a
-                        style={{ background: "rgb(61, 131, 221)" }}
-                        href="https://www.facebook.com/choilusion"
-                        className="fa-brands fa-facebook-f"
-                    ></a>
-                    <a
-                        style={{ background: "rgb(67, 182, 228)" }}
-                        href="https://twitter.com/?lang=es"
-                        className="fa-brands fa-twitter"
-                    ></a>
-                    <a
-                        style={{ backgroundImage: "linear-gradient(to right, #ff8d54, #ff13ff)" }}
-                        href="https://www.instagram.com/bananas_cocktails/"
-                        className="fa-brands fa-instagram"
-                    ></a>
-                </section>
-            </footer>
+            <PiePagina />
 
-            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-            <script src="../js/botellas.js"></script>
+            
         </div>
     );
 }
