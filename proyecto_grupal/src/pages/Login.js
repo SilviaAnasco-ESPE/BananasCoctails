@@ -4,42 +4,34 @@ import logoMenu from '../assets/img/logo.png';
 
 const Login = () => {
     const [usuario, setUsuario] = useState("");
-    const [contraseña, setContraseña] = useState("");
+    const [contrasena, setContrasena] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    const handleSubmit = async (event) => {
+        event.preventDefault(); // Evita el comportamiento por defecto del formulario
 
-        // Aquí puedes agregar la lógica de validación de usuario y contraseña
-        const credencialesValidas = usuario === "miguel@gmail" && contraseña === "luis";
+        try {
+            const response = await fetch(`http://localhost:8000/login?usuario=${usuario}&contrasena=${contrasena}`);
 
-        if (credencialesValidas) {
-            setLoggedIn(true);
-            // Redirigir a la página deseada
-            window.location.href = "/";
-        } else {
-            alert("Credenciales incorrectas");
+            const data = await response.json();
+            
+            if (data.success) { // Verifica si la autenticación fue exitosa
+                setLoggedIn(true);
+                // Redirigir a la página deseada
+                window.location.href = "/";
+            } else {
+                alert("Usuario o contraseña incorrectos");
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Ocurrió un error al intentar iniciar sesión');
         }
     };
-
-    const handleUsuarioChange = (event) => {
-        setUsuario(event.target.value);
-    };
-
-    const handleContraseñaChange = (event) => {
-        setContraseña(event.target.value);
-    };
-
-    if (loggedIn) {
-        // Si el usuario está autenticado, podrías redirigir a la ruta deseada aquí
-        // Redirigir a la página deseada
-        window.location.href = "/";
-    }
 
     return (
         <div className="login-body">
             <section className="login-wrapper">
-                <form action="../formularios/validar.php" className="login-form" method="post" onSubmit={handleSubmit}>
+                <form className="login-form" onSubmit={handleSubmit}>
                     <h1 className="login-title">Inicio</h1>
                     <section className="login-inp">
                         <input
@@ -47,21 +39,21 @@ const Login = () => {
                             name="usuario"
                             className="login-input"
                             placeholder="Usuario"
+                            onChange={(e) => setUsuario(e.target.value)}
                             value={usuario}
-                            onChange={handleUsuarioChange}
                         />
                         <i className="fa-regular fa-user"></i>
                     </section>
                     <section className="login-inp">
                         <input
                             type="password"
-                            name="contraseña"
+                            name="contrasena"
                             className="login-input"
                             placeholder="Contraseña"
-                            value={contraseña}
-                            onChange={handleContraseñaChange}
+                            onChange={(e) => setContrasena(e.target.value)}
+                            value={contrasena}
                         />
-                        <i className="fa-regular fa-lock"></i>
+                       <i class="fa-solid fa-unlock"></i>
                     </section>
                     <input className="login-submit" type="submit" value="Iniciar Sesión" />
                     <p className="login-footer">¿No tienes cuenta?
