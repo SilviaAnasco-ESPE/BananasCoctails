@@ -10,7 +10,6 @@ const Carta = () => {
     return (
         <>
             <Menu />
-
             <section className="contenedor">
                 <div id="container-items" className="container-items">
                     <CartaProductos/>
@@ -25,7 +24,6 @@ const Carta = () => {
                     <section className="carrito-items">
                         <Carrito/>
                     </section>
-
                     <section className="carrito-total">
                         <section className="fila">
                             <strong>Tu Total</strong>
