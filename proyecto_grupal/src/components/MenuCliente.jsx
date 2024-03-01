@@ -21,7 +21,6 @@ function menu() {
             <Link to = "/">Inicio</Link>
             <Link to = "/nosotros">Nosotros</Link>
             <Link to = "/inicio#contacto">Conctacto</Link>
-            <Link to = "/login">Iniciar Sesion</Link>
           </nav>
         </section>
       </header>
@@ -36,9 +35,13 @@ function menu() {
             </center>
           </header>
           <nav>
+            <Link to = "/carta">Carta</Link>
             <Link to = "/paquetes">Paquetes</Link>
             <Link to = "/nosotros">Nosotros</Link>
+            <Link to = "/login">Salir</Link>
           </nav>
+         
+
           <label htmlFor="btn-menu">✖️</label>
         </section>
       </aside>

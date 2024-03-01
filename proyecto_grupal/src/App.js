@@ -5,6 +5,11 @@ import Index from './pages/Index';
 import PaquetesProductos from './pages/Paquetes_Productos';
 import Login from './pages/Login';
 import Nosotros from './pages/Nosotros';
+import CartaUusario from './pages/client/Carta.js';
+import IndexUsuario from './pages/client/IndexUsuario.js';
+import Registro from './pages/Register.js';
+import OrdenAdmin from './pages/admin/Ordenes.js';
+
 
 function App() {
   return (
@@ -16,6 +21,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path ="/inicio" element={<Index />} />
+        <Route path ="/cartaUsuario" element={<CartaUusario />} />
+        <Route path ="/indexUsuario" element={<IndexUsuario />} />
+        <Route path ="/registro" element={<Registro />} />
+        <Route path ="/ordenAdmin" element={<OrdenAdmin />} />
       </Routes>
     </div>
   );

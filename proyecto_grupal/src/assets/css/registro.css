@@ -1,0 +1,103 @@
+.cuerpo {
+    background-color: #030303;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(../img/FONDO.jpg);
+    opacity: 0.9;
+}
+
+.register-container {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto; /* Dos columnas */
+    grid-gap: 10px; 
+}
+
+.register-container header {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-field {
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    height: 50px;
+    width: 300px;
+    padding: 0 10px 0 45px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+}
+
+.input-field:hover,
+.input-field:focus {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.input-box i {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    color: #fff;
+}
+
+.submit1 {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    height: 45px;
+    width: 320px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.submit1:hover {
+    background: rgba(255, 255, 255, 0.986);
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+.two-col {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: small;
+    margin-top: 10px;
+}
+
+.two-col .one {
+    display: flex;
+    gap: 5px;
+}
+
+.two label a {
+    text-decoration: none;
+    color: #0b7dff;
+}
+
+.two label a:hover {
+    text-decoration: underline;
+}
