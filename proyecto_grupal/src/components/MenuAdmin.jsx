@@ -1,12 +1,12 @@
-import React from 'react';
-import '../assets/css/index.css';
-import '../assets/css/estiloBase.css';
-import logoMenu from '../assets/img/logo.png';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "../assets/css/index.css";
+import "../assets/css/estiloBase.css";
+import logoMenu from "../assets/img/logo.png";
+import { Link } from "react-router-dom";
 
 function menu() {
-    return (
-        <div className="App">
+  return (
+    <div className="App">
       <header className="header">
         <section className="container">
           <section className="btn-menu">
@@ -18,9 +18,9 @@ function menu() {
           </section>
 
           <nav className="menu">
-            <Link to = "/indexUsuario">Inicio</Link>
-            <Link to = "/nosotros">Nosotros</Link>
-            <Link to = "/indexUsuario#contacto">Conctacto</Link>
+            <Link to="/indexUsuario">Inicio</Link>
+            <Link to="/nosotros">Nosotros</Link>
+            <Link to="/indexUsuario#contacto">Conctacto</Link>
           </nav>
         </section>
       </header>
@@ -35,19 +35,17 @@ function menu() {
             </center>
           </header>
           <nav>
-            <Link to = "/carta">Carta</Link>
-            <Link to = "/paquetes">Paquetes</Link>
-            <Link to = "/nosotros">Nosotros</Link>
-            <Link to = "/login">Salir</Link>
+            <Link to="/carta">Carta</Link>
+            <Link to="/paquetes">Paquetes</Link>
+            <Link to="/nosotros">Nosotros</Link>
+            <Link to="/perfilControllerAdmin">Administrar perfiles</Link>
+            <Link to="/login">Salir</Link>
           </nav>
-         
 
           <label htmlFor="btn-menu">✖️</label>
         </section>
       </aside>
-
     </div>
-    )
-    
+  );
 }
 export default menu;

@@ -9,6 +9,7 @@ import CartaUusario from './pages/client/Carta.js';
 import IndexUsuario from './pages/client/IndexUsuario.js';
 import Registro from './pages/Register.js';
 import OrdenAdmin from './pages/admin/Ordenes.js';
+import PerfilControoller from './pages/admin/PerfilController.js';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path ="/indexUsuario" element={<IndexUsuario />} />
         <Route path ="/registro" element={<Registro />} />
         <Route path ="/ordenAdmin" element={<OrdenAdmin />} />
+        <Route path ="/perfilControllerAdmin" element={<PerfilControoller />} />
       </Routes>
     </div>
   );

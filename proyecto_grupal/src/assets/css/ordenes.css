@@ -1,0 +1,102 @@
+/* Ordenes.css */
+
+.elegant-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.elegant-table th, .elegant-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.elegant-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.elegant-table tbody tr:nth-child(even) {
+    background-color: #fffdfdab;
+}
+
+.elegant-table tbody tr:hover {
+    background-color: #ddd;
+}
+.tituloTabla{
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.ComboBusqueda{
+    margin: 10px;
+    
+}
+
+select{
+    width: 19%;
+    padding: 10px;
+    font-size: 16px;
+    font-size: 1px solid #000000;
+    border-radius: 5px;
+    color: #000000;
+}
+
+select option{
+    color: #000000;
+    background-color: #ffffff;
+}
+
+select:focus{
+    outline: none;
+    border-color: #000000;
+}
+.Busqueda{
+   text-align: right;
+   color: #000000;
+}
+
+.Busqueda input{
+    color: #000;
+}
+td,th{
+    text-align: center;
+    color: #000;
+}
+
+/* Estilos para el boton de búsqueda */
+.BuscarButton button {
+    background-color: #883cac; 
+    border: none;
+    color: rgb(0, 0, 0); 
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+/* Caja de texto de búsqueda */
+.Busqueda input[type="text"] {
+    width: 200px; 
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    box-sizing: border-box; 
+}
+
+.BuscarButton button:hover {
+    background-color: #cf47f8; 
+}
+
+.Busqueda input[type="text"]:focus {
+    border: 1px solid #740083; 
+    outline: none; 
+}

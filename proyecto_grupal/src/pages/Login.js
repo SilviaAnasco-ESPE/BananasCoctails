@@ -10,7 +10,7 @@ const Login = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault(); // Evita el comportamiento por defecto del formulario
-        if(usuario === "miguel@gmail" || contrasena === "luis"){
+        if(usuario === "miguel@gmail" && contrasena === "luis"){
             window.location.href = "/ordenAdmin";
         }else{
             try {
